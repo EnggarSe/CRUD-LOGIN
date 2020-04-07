@@ -6,17 +6,29 @@ const userLogin = (event)=>{
     const emailInput = document.getElementById("email").value;
     const passwordInput = document.getElementById("password").value;
     count = 0;
-    for(let i = 0 ; i<userData.length ; i++){
-        if(emailInput === userData[i].email && passwordInput === userData[i].password){
-            count =+ 1;
-            alert("berhasil Login");
-            window.location.href = `${window.origin}/dashboard.html`;
-            break;
+    if(emailInput === "" && passwordInput ===""){
+        alert("form tidak bisa kosong");
+    }
+    else{
+        if(userData==null){
+            alert("Username tidak ditemukan")
         }
-    }
-    if(count ==0){
-        alert("email atau Password salah")
-    }
-
+        else{
+            for(let i = 0 ; i<userData.length ; i++){
+                if(emailInput === userData[i].email && passwordInput === userData[i].password){
+                    count =+ 1;
+                    alert("berhasil Login");
+                    window.location.href = `${window.origin}/dashboard.html`;
+                    break;
+                }
+            }
+            if(count ==0){
+                alert("email atau Password salah")
+            }
+        
+        }
+        }
+       
+    
 }
 loginForm.addEventListener("submit", userLogin);
