@@ -80,19 +80,25 @@ const searchList = (event)=>{
     event.preventDefault();
     let todos = get();
     let textSearch = document.getElementById("inlineFormInputName1").value.toLowerCase();
-    let result = todos.filter(item=>{
-        if(item.includes(textSearch)){
-            return item;
-        }
-    })
-    if (result.length!=0){
-        tampilkanSearch(result);
-        
-        
+    if(textSearch === ''){
+        alert("Tidak Boleh Kosong")
     }
     else{
-        alert("Barang Tidak Di Temukan")
+        let result = todos.filter(item=>{
+            if(item.includes(textSearch)){
+                return item;
+            }
+        })
+        if (result.length!=0){
+            tampilkanSearch(result);
+            
+            
+        }
+        else{
+            alert("Barang Tidak Di Temukan")
+        }
     }
+    
     
 }
 buttonAdd.addEventListener('click', addList);
