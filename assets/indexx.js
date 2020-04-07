@@ -31,13 +31,18 @@ let tampilkanBarang = (barang = get())=>{
     let tampil = document.getElementById("list-todos");
     if(barang.length!=0){
         tampil.innerHTML = "";
-        for(let i = 1 ; i<barang.length ; i++){
-            tampil.innerHTML += `<li class ="">
+        for(let i = 0 ; i<barang.length ; i++){
+            tampil.innerHTML += `<li>
             <span id = barang-${i}>${barang[i]}</span>
             <button id = hapus-${i} class="btn btn-outline-dark btn-sm" aria-hidden="true" aria-hidden="true" onclick = "hapusButton(this)" >hapus</button>
             <button id = edit-${i} class="btn btn-outline-dark btn-sm" aria-hidden="true"  onclick = "editButton(this)">edit</button> 
             </li>`
         }
+    }
+    else{
+        alert('Semua Item Telah Dihapus')
+        tampil.innerHTML = "";
+        
     }
 }
 
@@ -45,10 +50,9 @@ let tampilkanSearch = (barang = get())=>{
     let tampil = document.getElementById("list-todos");
     if(barang.length!=0){
         tampil.innerHTML = "";
-        for(let i = 1 ; i<barang.length ; i++){
-            tampil.innerHTML += `<li class ="d-flex justify-content-between">
+        for(let i = 0 ; i<barang.length ; i++){
+            tampil.innerHTML += `<li>
             <span id = barang-${i}>${barang[i]}</span> 
-
             </li> `
         }
     }
@@ -58,7 +62,7 @@ const hapusButton = (posisi)=>{
     let id = posisi.id.replace("hapus-", "");
     todos.splice(id,1);
     save(todos);
-    tampilkanBarang();
+    tampilkanBarang(todos);
 }
 
 const editButton = (posisi)=>{
