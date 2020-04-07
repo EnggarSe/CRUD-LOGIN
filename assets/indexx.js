@@ -9,6 +9,9 @@ const addList = (event)=>{
         save(todos);
         tampilkanBarang();
     }
+    else{
+        alert("Inputan tidak boleh kosong")
+    }
 }
 
 let get = () =>{
@@ -28,7 +31,7 @@ let tampilkanBarang = (barang = get())=>{
     let tampil = document.getElementById("list-todos");
     if(barang.length!=0){
         tampil.innerHTML = "";
-        for(let i = 0 ; i<barang.length ; i++){
+        for(let i = 1 ; i<barang.length ; i++){
             tampil.innerHTML += `<li class ="">
             <span id = barang-${i}>${barang[i]}</span>
             <button id = hapus-${i} class="btn btn-outline-dark btn-sm" aria-hidden="true" aria-hidden="true" onclick = "hapusButton(this)" >hapus</button>
@@ -53,8 +56,6 @@ let tampilkanSearch = (barang = get())=>{
 const hapusButton = (posisi)=>{
     let todos = get();
     let id = posisi.id.replace("hapus-", "");
-    console.log(id);
-    
     todos.splice(id,1);
     save(todos);
     tampilkanBarang();
