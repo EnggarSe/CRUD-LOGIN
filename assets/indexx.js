@@ -45,7 +45,7 @@ let tampilkanSearch = (barang = get())=>{
     let tampil = document.getElementById("list-todos");
     if(barang.length!=0){
         tampil.innerHTML = "";
-        for(let i = 0 ; i<barang.length ; i++){
+        for(let i = 1 ; i<barang.length ; i++){
             tampil.innerHTML += `<li class ="d-flex justify-content-between">
             <span id = barang-${i}>${barang[i]}</span> 
 
