@@ -1,0 +1,44 @@
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 0 20px;
+  margin: 10px 10px 10px 10px;
+}
+
+form button {
+  width: 65px;
+  height: 35px;
+  margin-top: 3px;
+}
+
+#output div {
+  width: 65px;
+  height: 35px;
+}
+
+#output ul {
+  color: black;
+  margin-left: 400px;
+}
+
+#output li {
+  margin-top: 13px;
+  list-style: none;
+}
+
+#output span {
+  margin-right: 30px;
+}
+
+#output button {
+  margin-right: 20px;
+  height: 30px;
+  width: 60px;
+  margin-top: 5px;
+}
+/*# sourceMappingURL=indexx.css.map */

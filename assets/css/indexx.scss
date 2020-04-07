@@ -1,0 +1,46 @@
+nav{
+    ul{
+        display: flex;
+        li{
+            list-style: none;
+            padding : 0 20px ;
+            margin : 10px 10px 10px 10px;
+        }
+    }
+}
+
+form{
+    button{
+        width: 65px;
+        height : 35px;
+        margin-top : 3px;
+            
+    }
+}
+#output{
+    div{
+       
+        width: 65px;
+        height : 35px;
+    }
+    ul{
+        color: black;
+        margin-left: 400px;
+    }
+    li{
+        margin-top : 13px;
+        list-style: none;
+        
+    }
+    span{
+        margin-right: 30px;
+        
+    }
+    button{
+        margin-right : 20px;
+        height: 30px ;
+        width : 60px;
+        margin-top : 5px;
+    }
+    
+}
