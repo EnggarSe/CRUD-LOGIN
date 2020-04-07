@@ -24,7 +24,7 @@ const userRegistration = (event) => {
             userDataAll.push(userData) ;
             localStorage.setItem("userData", JSON.stringify(userDataAll));
             alert("Registration Success")
-            window.location.href = `${window.origin}/login.html` ;
+            window.location.href = `${window.origin}/index.html` ;
             
         }
         else{
@@ -39,7 +39,7 @@ const userRegistration = (event) => {
                 userDataAll.push(userData) ;
                 localStorage.setItem("userData", JSON.stringify(userDataAll));
                 alert("Registration Success")
-                window.location.href = `${window.origin}/login.html` ;
+                window.location.href = `${window.origin}/index.html` ;
 
             }
         }
